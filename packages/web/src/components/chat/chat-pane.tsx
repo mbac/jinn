@@ -77,7 +77,7 @@ export function ChatPane({
 
   // Employee picker state for new chat
   const [selectedEmployee, setSelectedEmployee] = useState<string | null>(null)
-  const [pickerEmployees, setPickerEmployees] = useState<Pick<Employee, 'name' | 'displayName' | 'department' | 'rank'>[]>([])
+  const [pickerEmployees, setPickerEmployees] = useState<Pick<Employee, 'name' | 'displayName' | 'department' | 'rank' | 'emoji'>[]>([])
   const employeesFetchedRef = useRef(false)
 
   useEffect(() => {
@@ -90,6 +90,7 @@ export function ChatPane({
         displayName: emp.displayName,
         department: emp.department,
         rank: emp.rank,
+        emoji: emp.emoji,
       })))
       employeesFetchedRef.current = true
     }).catch(() => {})

@@ -740,7 +740,7 @@ export function ChatSidebar({
               )}
             >
               <div className="relative flex size-9 shrink-0 items-center justify-center">
-                <EmployeeAvatar name={empName} size={36} />
+                <EmployeeAvatar name={empName} emoji={empInfo?.emoji} size={36} />
                 <StatusDot
                   color={dotColor}
                   pulse={pulse}

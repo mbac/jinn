@@ -20,7 +20,7 @@ export function EmployeeNode({ data, selected }: NodeProps) {
     >
       {/* Avatar + Name row */}
       <div className="flex items-center gap-[var(--space-2)] mb-[var(--space-1)]">
-        <EmployeeAvatar name={employee.name} size={24} />
+        <EmployeeAvatar name={employee.name} emoji={employee.emoji} size={24} />
         <div className="flex-1 min-w-0">
           <div className="text-[length:var(--text-body)] font-[var(--weight-semibold)] text-[var(--text-primary)] whitespace-nowrap overflow-hidden text-ellipsis leading-[var(--leading-tight)]">
             {employee.displayName || employee.name}

@@ -5,7 +5,7 @@ import { EmployeeAvatar } from '@/components/ui/employee-avatar'
 import { cn } from '@/lib/utils'
 import type { Employee } from '@/lib/api'
 
-type PickerEmployee = Pick<Employee, 'name' | 'displayName' | 'department' | 'rank'>
+type PickerEmployee = Pick<Employee, 'name' | 'displayName' | 'department' | 'rank' | 'emoji'>
 
 interface ChatEmployeePickerProps {
   employees: PickerEmployee[]
@@ -180,7 +180,7 @@ export function ChatEmployeePicker({
                     isSelected && 'bg-[color-mix(in_srgb,var(--accent)_8%,transparent)]'
                   )}
                 >
-                  <EmployeeAvatar name={emp.name} size={28} />
+                  <EmployeeAvatar name={emp.name} emoji={emp.emoji} size={28} />
                   <div className="flex-1 min-w-0">
                     <span className="text-[length:var(--text-footnote)] font-[var(--weight-medium)] text-[var(--text-primary)] overflow-hidden text-ellipsis whitespace-nowrap block">
                       {emp.displayName}

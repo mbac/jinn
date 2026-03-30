@@ -115,7 +115,7 @@ export function ChatTabBar({ tabs, activeIndex, onSwitch, onClose, onNew, onPin,
               )}
             >
               <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${STATUS_COLORS[tab.status] || STATUS_COLORS.idle}`} />
-              {tab.employeeName && <EmployeeAvatar name={tab.employeeName} size={16} />}
+              {tab.employeeName && <EmployeeAvatar name={tab.employeeName} emoji={tab.emoji} size={16} />}
               <span className={cn(
                 "truncate",
                 tab.pinned ? "font-medium" : "font-normal italic",

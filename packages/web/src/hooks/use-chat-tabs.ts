@@ -5,7 +5,7 @@ import { useState, useCallback, useEffect, useMemo } from 'react'
 export interface ChatTab {
   sessionId: string
   label: string        // Employee name or session title
-  emoji?: string       // Employee avatar emoji (legacy, unused)
+  emoji?: string       // Employee avatar emoji from org definition
   employeeName?: string // Employee name for avatar generation
   status: 'idle' | 'running' | 'error'
   unread: boolean
