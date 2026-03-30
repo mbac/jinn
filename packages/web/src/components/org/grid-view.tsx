@@ -29,7 +29,7 @@ function EmployeeCard({
           : "var(--shadow-subtle)",
       }}
     >
-      <EmployeeAvatar name={employee.name} size={28} />
+      <EmployeeAvatar name={employee.name} emoji={employee.emoji} size={28} />
       <div className="flex-1 min-w-0">
         <div className="text-[length:var(--text-body)] font-[var(--weight-semibold)] text-[var(--text-primary)] whitespace-nowrap overflow-hidden text-ellipsis leading-[var(--leading-tight)]">
           {employee.displayName || employee.name}
@@ -109,7 +109,7 @@ export function GridView({ employees, selectedName, onSelect }: GridViewProps) {
                 : "var(--shadow-card)",
           }}
         >
-          <EmployeeAvatar name={executive.name} size={40} />
+          <EmployeeAvatar name={executive.name} emoji={executive.emoji} size={40} />
           <div className="flex-1 min-w-0">
             <div className="text-[length:var(--text-title2)] font-[var(--weight-bold)] text-[var(--text-primary)] tracking-[var(--tracking-tight)] leading-[var(--leading-tight)]">
               {executive.displayName || executive.name}

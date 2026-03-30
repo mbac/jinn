@@ -5,6 +5,7 @@ import { emojiForName } from "@/lib/emoji-pool"
 
 interface EmployeeAvatarProps {
   name: string
+  emoji?: string
   size?: number
   className?: string
   onClick?: () => void
@@ -12,13 +13,14 @@ interface EmployeeAvatarProps {
 
 export function EmployeeAvatar({
   name,
+  emoji: employeeEmoji,
   size = 32,
   className,
   onClick,
 }: EmployeeAvatarProps) {
   const { settings } = useSettings()
   const override = name ? settings.employeeOverrides[name] : undefined
-  const emoji = override?.emoji || emojiForName(name || '')
+  const emoji = override?.emoji || employeeEmoji || emojiForName(name || '')
   const fontSize = Math.round(size * 0.6)
 
   return (

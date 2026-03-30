@@ -128,6 +128,7 @@ export function EmployeeDetail({ name, prefetched }: { name: string; prefetched?
             <div className="relative">
               <EmployeeAvatar
                 name={employee.name}
+                emoji={employee.emoji}
                 size={36}
                 onClick={() => setShowAvatarPicker(!showAvatarPicker)}
               />

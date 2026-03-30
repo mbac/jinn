@@ -111,7 +111,7 @@ export function FeedView({ employees, selectedName, onSelect }: FeedViewProps) {
                 )}
                 style={idx > 0 ? { borderTop: "1px solid var(--separator)" } : undefined}
               >
-                <EmployeeAvatar name={emp.name} size={24} />
+                <EmployeeAvatar name={emp.name} emoji={emp.emoji} size={24} />
 
                 <div className="min-w-0 flex-1">
                   <div className="flex items-center gap-[var(--space-2)]">

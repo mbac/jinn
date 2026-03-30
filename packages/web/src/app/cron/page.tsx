@@ -357,7 +357,7 @@ export default function CronPage() {
                         <div key={empKey}>
                           {/* Group header */}
                           <div className="flex items-center gap-[var(--space-2)] mb-[var(--space-2)]">
-                            {empKey !== "_unassigned" && <EmployeeAvatar name={empKey} size={20} />}
+                            {empKey !== "_unassigned" && <EmployeeAvatar name={empKey} emoji={empData?.emoji} size={20} />}
                             <span className="text-[length:var(--text-caption1)] font-[var(--weight-semibold)] text-[var(--text-secondary)]">
                               {displayName}
                             </span>
